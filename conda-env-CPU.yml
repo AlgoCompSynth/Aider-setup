@@ -1,0 +1,7 @@
+name: aider
+dependencies:
+  - python
+  - ollama
+  - pip
+  - pip:
+    - aider-install

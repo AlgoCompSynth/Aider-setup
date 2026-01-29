@@ -1,0 +1,13 @@
+if [[ $(which nvidia-smi | wc -l) == "0" ]]
+then
+  export COMPUTE_MODE=CPU; echo "COMPUTE_MODE: $COMPUTE_MODE"
+
+else
+  export COMPUTE_MODE=CUDA; echo "COMPUTE_MODE: $COMPUTE_MODE"
+
+fi
+
+export ARCH=`uname -m`; echo "ARCH: $ARCH"
+
+export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
+export MINIFORGE3_HOME=$HOME/miniforge3; echo "MINIFORGE3_HOME: $MINIFORGE3_HOME"

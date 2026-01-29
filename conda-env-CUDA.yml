@@ -1,0 +1,12 @@
+name: aider
+dependencies:
+  - python
+  - cudnn
+  - cutensor
+  - cupy
+  - nccl
+  - nvitop
+  - ollama
+  - pip
+  - pip:
+    - aider-install

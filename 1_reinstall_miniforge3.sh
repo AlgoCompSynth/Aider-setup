@@ -26,7 +26,7 @@ pushd /tmp > /dev/null
   fi
 
   echo "Installing Miniforge3 to \$MINIFORGE3_HOME"
-  ./Miniforge3-Linux-$ARCH.sh -b -p $MINIFORGE3_HOME \
+  ./Miniforge3-Linux-$ARCH.sh -b -c -p $MINIFORGE3_HOME \
     >> $LOGFILE 2>&1
 
 popd > /dev/null
@@ -49,14 +49,5 @@ conda config --set remote_read_timeout_secs 300
 echo "Updating base packages"
 conda update --name base --all --yes --quiet \
   >> $LOGFILE 2>&1
-
-echo "Setting up bash command line"
-conda init bash > /dev/null
-
-if [ -e $HOME/.zshrc ]
-then
-  echo "Setting up zsh command line"
-  conda init zsh > /dev/null
-fi
 
 echo "Finished"

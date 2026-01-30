@@ -8,12 +8,12 @@ export LOGFILES=$HOME/Logfiles
 mkdir --parents $LOGFILES
 
 for model in \
-  codestral:latest \
-  deepseek-coder-v2:latest \
-  devstral-small-2:latest \
-  glm-4.7-flash:latest \
-  gpt-oss:latest \
-  qwen3-coder:latest
+  codestral:22b \
+  deepseek-coder-v2:16b \
+  devstral-small-2:24b \
+  glm-4.7-flash:q4_K_M \
+  gpt-oss:20b \
+  qwen3-coder:30b
 
 do
   echo "pulling $model"

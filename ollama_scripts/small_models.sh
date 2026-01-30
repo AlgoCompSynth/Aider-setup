@@ -8,13 +8,13 @@ export LOGFILES=$HOME/Logfiles
 mkdir --parents $LOGFILES
 
 for model in \
-  codellama:latest \
-  deepseek-r1:latest \
-  dolphin3:latest \
-  llama3.1:latest \
-  mistral:latest\
-  mistral-nemo:latest \
-  phi3:latest
+  codellama:13b \
+  deepseek-r1:8b \
+  dolphin3:8b \
+  llama3.1:8b \
+  mistral:7b\
+  mistral-nemo:12b \
+  phi3:14b
 
 do
   echo "pulling $model"

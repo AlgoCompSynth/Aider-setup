@@ -3,5 +3,6 @@
 set -e
 
 echo ""
+echo "Models --"
 ollama list
 echo ""

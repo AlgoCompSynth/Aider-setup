@@ -5,6 +5,8 @@ set -e
 source set_envars
 export LOGFILE=$LOGFILES/recreate_conda_env.log
 rm --force $LOGFILE
+export LOCALBIN=$HOME/.local/bin; mkdir --parents $LOCALBIN
+export PATH=$PATH:$LOCALBIN
 
 echo ""
 echo "Enabling 'conda'"
@@ -20,18 +22,17 @@ echo "Recreating 'aider' virtual environment"
   >> $LOGFILE 2>&1
 
 echo "Activating 'aider' virtual environment"
-conda deactivate
 conda activate aider
 
-echo "Listing"
-conda list > aider.log
-
 echo "Installing aider"
-aider-install
+which aider-install
+/usr/bin/time aider-install >> $LOGFILE 2>&1
 which aider
-conda deactivate
 
 echo "Copying ollama scripts to $MINIFORGE3_HOME/envs/aider/bin/"
 cp ollama_scripts/*.sh $MINIFORGE3_HOME/envs/aider/bin/
+
+echo "Listing 'aider' virtual environment"
+conda list > aider.log
 
 echo "Finished"

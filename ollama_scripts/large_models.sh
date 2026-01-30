@@ -8,11 +8,10 @@ export LOGFILES=$HOME/Logfiles
 mkdir --parents $LOGFILES
 
 for model in \
-  codestral:22b \
-  deepseek-coder-v2:16b \
   devstral-small-2:24b \
   glm-4.7-flash:q4_K_M \
-  gpt-oss:20b \
+  nemotron-3-nano:30b \
+  qwen3:32b \
   qwen3-coder:30b
 
 do

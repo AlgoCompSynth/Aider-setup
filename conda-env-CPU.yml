@@ -1,6 +1,7 @@
 name: aider
 dependencies:
   - python
+  - conda-bash-completion
   - ollama
   - pip
   - pip:

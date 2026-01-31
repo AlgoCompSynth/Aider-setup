@@ -8,10 +8,8 @@ export LOGFILES=$HOME/Logfiles
 mkdir --parents $LOGFILES
 
 for model in \
-  devstral-small-2:24b \
   glm-4.7-flash:q4_K_M \
   nemotron-3-nano:30b \
-  qwen3:32b \
   qwen3-coder:30b
 
 do

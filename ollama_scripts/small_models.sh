@@ -8,17 +8,9 @@ export LOGFILES=$HOME/Logfiles
 mkdir --parents $LOGFILES
 
 for model in \
-  codellama:13b \
-  codestral:22b \
   deepseek-coder-v2:16b \
-  deepseek-v2:16b \
-  dolphin3:8b \
-  gpt-oss:20b \
-  llama3.1:8b \
-  magistral:24b \
-  mistral-small3.2:24b \
-  phi3:14b \
-  qwen3:14b \
+  devstral-small-2:24b-instruct-2512-q4_K_M \
+  gpt-oss:20b
 
 do
   echo "pulling $model"

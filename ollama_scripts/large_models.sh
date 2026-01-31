@@ -8,9 +8,9 @@ export LOGFILES=$HOME/Logfiles
 mkdir --parents $LOGFILES
 
 for model in \
+  qwen3-coder:30b \
   glm-4.7-flash:q4_K_M \
-  nemotron-3-nano:30b \
-  qwen3-coder:30b
+  nemotron-3-nano:30b
 
 do
   echo "pulling $model"

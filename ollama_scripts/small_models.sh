@@ -9,8 +9,8 @@ mkdir --parents $LOGFILES
 
 for model in \
   deepseek-coder-v2:16b \
-  devstral-small-2:24b-instruct-2512-q4_K_M \
-  gpt-oss:20b
+  gpt-oss:20b \
+  devstral-small-2:24b-instruct-2512-q4_K_M
 
 do
   echo "pulling $model"

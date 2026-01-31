@@ -38,6 +38,10 @@ source $MINIFORGE3_HOME/etc/profile.d/conda.sh
 echo "Activating 'base'"
 conda activate base
 
+echo "Installing conda-bash-completion"
+conda install conda-bash-completion --yes \
+  >> $LOGFILE 2>&1
+
 echo "Setting default threads to number of processors"
 conda config --set default_threads `nproc`
 
